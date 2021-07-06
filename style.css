@@ -18,7 +18,9 @@
           align-items: center;
   -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   width: 100%;
   background-color: white;
   z-index: 10;
@@ -44,6 +46,7 @@ nav a {
 
 .banner {
   position: relative;
+  width: 100%;
 }
 
 .banner .banner-video video {
@@ -55,7 +58,7 @@ nav a {
   position: absolute;
   z-index: 5;
   text-align: center;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   left: 50%;
