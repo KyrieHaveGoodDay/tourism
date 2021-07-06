@@ -6,8 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aurora</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- slick -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -35,8 +40,10 @@
     </div>
 
     <!-- 特羅姆瑟 -->
+
+    <h1>Tromso</h1>
     <section>
-        <h1>特羅姆瑟</h1>
+
         <div class="views">
             <div class="views-box">
                 <img src="./img/791f2c02-91b1-4df3-9761-1b3590fd2b0d.jpg" alt="">
@@ -61,12 +68,56 @@
         </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-        crossorigin="anonymous"></script>
+    <!-- 固定圖片區域 -->
+    <div class="flexed"></div>
+
+    <!-- 活動 -->
+    <h1>Activity</h1>
+    <div class="activity">
+        <div class="activity-box">
+            <div id="activity-img" class="activity-img">
+                <img src="./img/reindeer1.jpg" alt="">
+                <img src="./img/reindeer2.jpg" alt="">
+                <img src="./img/reindeer3.jpg" alt="">
+            </div>
+            <h2>馴鹿雪橇活動</h2>
+            <p>進入北極荒野探險，探索薩米人的古老歷史文化。認識擁有5000年歷史的薩米文化，並乘坐馴鹿雪橇，近距離接觸如精靈般的馴鹿。跟著當地導遊踏上獨特而非凡的旅程，深入了解傳統薩米人的生活方式、乘坐馴鹿雪橇穿越北極白雪皚皚的廣闊區域，旅途中將可以欣賞到沿途挪威山區與峽灣的美麗景觀。雪橇之旅結束後帶你前往一個迷人的營地，走進薩米人帳篷，一頓當地特色的薩米午餐已經為你備好，聽著當地牧民唱起古老的薩米歌謠，在篝火旁聆聽神秘的薩米傳說。行程中還能體驗餵養一群野生馴鹿並學習古老的套索投擲術，是來挪威旅行絕對不可錯過的活動！
+            </p>
+        </div>
+        <div class="activity-box">
+            <div id="activity-winter" class="activity-img">
+                <img src="./img/whinter1.jpg" alt="">
+                <img src="./img/whinter2.jpg" alt="">
+                <img src="./img/whinter3.jpg" alt="">
+            </div>
+            <h2>冬季雪靴徒步</h2>
+            <p>穿上雪靴，徒步之旅將帶你體驗極地林海雪原。上午從特羅姆瑟酒店出發，前往雪原地區的營地，嚮導向你介紹雪靴的行走技巧和安全事宜後，深入汽車無法進入的地區。欣賞沿途白雪森林、山脈、湖泊、森林和峽灣的迷人景觀，幸運的話還能看見北極野生動物，如雪狐、馴鹿在林海裡亂竄。路上你將可以停息幾站，休息期間會為你提供熱飲和挪威傳統蛋糕，以便好好享受這片雪原。周圍厚厚的積雪會讓你童心大發，在白雪皚皚裡盡情釋放自己吧！
+            </p>
+        </div>
+
+    </div>
+
+    <!-- 更多照片 -->
+    <h1>More Views</h1>
+    <div class="more-img">
+        <img src="./img/more1.jpg" alt="">
+        <img src="./img/more2.jpg" alt="">
+        <img src="./img/more3.jpg" alt="">
+        <img src="./img/more4.jpg" alt="">
+        <img src="./img/more5.jpg" alt="">
+        <img src="./img/more6.jpg" alt="">
+    </div>
+
+    <footer>
+        <p>&copy;2021 KyrieHaveGoodDay</p>
+    </footer>
+
+
+    <!-- jq -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
