@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-$main-font: "Anton", sans-serif;
+// @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+// $main-font: "Anton", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+$main-font:'Righteous', cursive;
+
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap");
 $main-chinese: "Noto Sans TC", sans-serif;
 
@@ -162,6 +166,7 @@ footer{
     justify-content: center;
     
     p{
+        font-family: $main-font;
         color: white;
     }
 }

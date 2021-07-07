@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap");
 * {
   margin: 0;
@@ -28,7 +28,7 @@
 
 .logo {
   font-size: 30px;
-  font-family: "Anton", sans-serif;
+  font-family: "Righteous", cursive;
 }
 
 .logo a {
@@ -39,7 +39,7 @@
 nav a {
   color: black;
   font-size: 24px;
-  font-family: "Anton", sans-serif;
+  font-family: "Righteous", cursive;
   padding: 0 10px;
   text-decoration: none;
 }
@@ -68,7 +68,7 @@ nav a {
 
 .banner .banner-text h3 {
   color: white;
-  font-family: "Anton", sans-serif;
+  font-family: "Righteous", cursive;
   font-size: 80px;
   text-shadow: 0 0 10px #3399ff, 0 0 10px #3399ff, 0 0 10px #3399ff;
 }
@@ -82,7 +82,7 @@ nav a {
 
 section h1 {
   text-align: center;
-  font-family: "Anton", sans-serif;
+  font-family: "Righteous", cursive;
   font-size: 30px;
 }
 
@@ -179,6 +179,7 @@ footer {
 }
 
 footer p {
+  font-family: "Righteous", cursive;
   color: white;
 }
 
@@ -199,7 +200,7 @@ footer p {
 
 h1 {
   font-size: 30px;
-  font-family: "Anton", sans-serif;
+  font-family: "Righteous", cursive;
   text-align: center;
 }
 
