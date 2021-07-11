@@ -277,4 +277,74 @@ footer p {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.NumberPeople {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(120deg, #a0c4ff 50%, transparent 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.NumberPeople .statistics {
+  width: 600px;
+  padding-top: 150px;
+}
+
+.NumberPeople .statistics h2 {
+  color: white;
+}
+
+.NumberPeople .statistics span {
+  color: white;
+  font-size: 24px;
+  display: block;
+}
+
+.NumberPeople .statistics .progress {
+  width: 400px;
+  height: 20px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: rgba(250, 250, 250, 0.45);
+}
+
+.NumberPeople .statistics .progress-bar {
+  width: 1px;
+  height: 20px;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  background-color: #e26789;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+.NumberPeople .introduction {
+  width: 600px;
+  padding-top: 150px;
+}
+
+.NumberPeople .introduction p {
+  margin: 0 auto;
+  width: 400px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.NumberPeople .introduction h2 {
+  text-align: center;
+}
+
+.NumberPeople .introduction ol {
+  width: 400px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+}
 /*# sourceMappingURL=style.css.map */
