@@ -262,6 +262,14 @@ footer {
   -7deg
   ); */
 }
+.offOn{
+    display: none;
+    transition: all 2s;
+}
+.onOff{
+    display: block;
+    
+}
 .box3 {
     width: 100%;
     height: 300px;

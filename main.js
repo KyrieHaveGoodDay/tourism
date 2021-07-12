@@ -20,3 +20,9 @@ $(window).scroll(function(){
         })
     }
 })
+
+$('#moveBox').slideUp();
+
+$('#offOn').click(function(){
+    $('#moveBox').slideToggle('slow');
+})
