@@ -40,6 +40,65 @@ h1 {
     z-index: 2;
 }
 
+
+// banner
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    // height: 100vh;
+
+    .banner-video {
+        // position: absolute;
+        video {
+            width: 100%;
+            // height: 100%;
+        }
+    }
+    .banner-text {
+        position: absolute;
+        z-index: 5;
+        text-align: center;
+        top: 40%;
+        transform: translateY(-50%);
+        left: 50%;
+        transform: translateX(-50%);
+        h3 {
+            color: white;
+            font-family: $main-font;
+            font-size: 80px;
+            text-shadow: 0 0 10px #3399ff, 0 0 10px #3399ff, 0 0 10px #3399ff;
+            // 小於等於
+            @media screen and (max-width: 1180px) {
+                font-size: 60px;
+            }
+            @media screen and (max-width: 867px) {
+                font-size: 40px;
+            }
+            @media screen and (max-width: 570px) {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: white;
+            font-family: $main-chinese;
+            font-size: 50px;
+            text-shadow: 0 0 10px #bd70b9, 0 0 10px #814a7f, 0 0 10px #3399ff;
+            // 小於等於
+            @media screen and (max-width: 1180px) {
+                font-size: 40px;
+            }
+            @media screen and (max-width: 867px) {
+                font-size: 30px;
+            }
+            @media screen and (max-width: 570px) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
 // 上方nav
 .title {
     display: flex;
@@ -53,6 +112,7 @@ h1 {
     width: 100%;
     background-color: white;
     z-index: 10;
+    overflow: hidden;
 }
 .logo {
     font-size: 30px;
@@ -71,45 +131,11 @@ nav {
         text-decoration: none;
     }
 }
-// banner
-.banner {
-    position: relative;
-    width: 100%;
-    // height: 100vh;
-
-    .banner-video {
-        // position: absolute;
-        video {
-            width: 100%;
-            height: 100%;
-        }
-    }
-    .banner-text {
-        position: absolute;
-        z-index: 5;
-        text-align: center;
-        top: 40%;
-        transform: translateY(-50%);
-        left: 50%;
-        transform: translateX(-50%);
-        h3 {
-            color: white;
-            font-family: $main-font;
-            font-size: 80px;
-            text-shadow: 0 0 10px #3399ff, 0 0 10px #3399ff, 0 0 10px #3399ff;
-        }
-        p {
-            color: white;
-            font-family: $main-chinese;
-            font-size: 50px;
-            text-shadow: 0 0 10px #bd70b9, 0 0 10px #814a7f, 0 0 10px #3399ff;
-        }
-    }
-}
 
 // 特羅姆瑟
 section {
     // height: 100%;
+    overflow: hidden;
     h1 {
         text-align: center;
         font-family: $main-font;
@@ -118,6 +144,11 @@ section {
     .views {
         display: flex;
         justify-content: center;
+        // 小於等於
+        @media screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+        
     }
     .views-box {
         width: 350px;
@@ -168,15 +199,24 @@ section {
     display: flex;
     margin: 20px 0;
     justify-content: center;
+    @media screen and (max-width: 1000px) {
+        flex-wrap: wrap;
+    }
 
     .activity-box {
         width: 450px;
         margin: 0 30px;
+        @media screen and (max-width: 460px) {
+            width: 420px;
+        }
         .activity-img {
             img {
                 width: 450px;
                 height: 500px;
                 object-fit: cover;
+                @media screen and (max-width: 460px) {
+                    width: 100%;
+                }
             }
         }
         h2 {
@@ -233,7 +273,7 @@ footer {
 
 .about-content {
     padding: 0 20px;
-    h1{
+    h1 {
         font-family: $main-chinese;
     }
     .about-text {
@@ -242,74 +282,69 @@ footer {
             padding: 0 30px;
             font-family: $main-chinese;
         }
-        img{
+        img {
             object-fit: cover;
         }
     }
 }
 
 // 觀光人口統計
-.NumberPeople{
+.NumberPeople {
     width: 100%;
     height: 100vh;
     // background-color: cadetblue;
     background: linear-gradient(120deg, #a0c4ff 50%, transparent 50%);
     display: flex;
     justify-content: center;
-    .statistics{
-        
+    .statistics {
         width: 600px;
         // height: 600px;
         padding-top: 150px;
         // border: black 1px solid;
-       h2{
-           color: white;
-       }
-        span{
+        h2 {
+            color: white;
+        }
+        span {
             color: white;
             font-size: 24px;
             display: block;
-            
-            
         }
-        .progress{
-            
+        .progress {
             width: 400px;
             height: 20px;
             // border: black 1px solid;
             border-radius: 3px;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
-            background-color: rgba(#fafafa, .45);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+            background-color: rgba(#fafafa, 0.45);
         }
-        .progress-bar{
+        .progress-bar {
             width: 1px;
             height: 20px;
             text-align: center;
             color: white;
             font-size: 12px;
             background-color: #e26789;
-            box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+            box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
             transition: width 1s ease;
         }
     }
-    .introduction{
+    .introduction {
         width: 600px;
         // height: 600px;
         // border: black 1px solid;
         padding-top: 150px;
-        p{
+        p {
             margin: 0 auto;
             width: 400px;
             font-family: $main-chinese;
         }
-        h2{
+        h2 {
             text-align: center;
         }
-        ol{
+        ol {
             width: 400px;
             margin: 0 auto;
             font-family: $main-chinese;
         }
     }
-
 }

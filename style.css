@@ -40,51 +40,14 @@ h1 {
   z-index: 2;
 }
 
-.title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 10;
-}
-
-.logo {
-  font-size: 30px;
-  font-family: "Righteous", cursive;
-}
-
-.logo a {
-  color: black;
-  text-decoration: none;
-}
-
-nav a {
-  color: black;
-  font-size: 24px;
-  font-family: "Righteous", cursive;
-  padding: 0 10px;
-  text-decoration: none;
-}
-
 .banner {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .banner .banner-video video {
   width: 100%;
-  height: 100%;
 }
 
 .banner .banner-text {
@@ -106,11 +69,89 @@ nav a {
   text-shadow: 0 0 10px #3399ff, 0 0 10px #3399ff, 0 0 10px #3399ff;
 }
 
+@media screen and (max-width: 1180px) {
+  .banner .banner-text h3 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .banner .banner-text h3 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .banner .banner-text h3 {
+    font-size: 30px;
+  }
+}
+
 .banner .banner-text p {
   color: white;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 50px;
   text-shadow: 0 0 10px #bd70b9, 0 0 10px #814a7f, 0 0 10px #3399ff;
+}
+
+@media screen and (max-width: 1180px) {
+  .banner .banner-text p {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .banner .banner-text p {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .banner .banner-text p {
+    font-size: 20px;
+  }
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 30px;
+  font-family: "Righteous", cursive;
+}
+
+.logo a {
+  color: black;
+  text-decoration: none;
+}
+
+nav a {
+  color: black;
+  font-size: 24px;
+  font-family: "Righteous", cursive;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+section {
+  overflow: hidden;
 }
 
 section h1 {
@@ -126,6 +167,13 @@ section .views {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  section .views {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 section .views-box {
@@ -185,9 +233,22 @@ section .views-box p {
           justify-content: center;
 }
 
+@media screen and (max-width: 1000px) {
+  .activity {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .activity .activity-box {
   width: 450px;
   margin: 0 30px;
+}
+
+@media screen and (max-width: 460px) {
+  .activity .activity-box {
+    width: 420px;
+  }
 }
 
 .activity .activity-box .activity-img img {
@@ -195,6 +256,12 @@ section .views-box p {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media screen and (max-width: 460px) {
+  .activity .activity-box .activity-img img {
+    width: 100%;
+  }
 }
 
 .activity .activity-box h2 {
