@@ -10,9 +10,7 @@ $main-chinese: "Noto Sans TC", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-
 
 // 共用區
 .all-a {
@@ -41,7 +39,6 @@ h1 {
     transform: translateX(30px);
     z-index: 2;
 }
-
 
 // banner
 .banner {
@@ -100,7 +97,6 @@ h1 {
     }
 }
 
-
 // 上方nav
 .title {
     display: flex;
@@ -150,7 +146,6 @@ section {
         @media screen and (max-width: 1200px) {
             flex-wrap: wrap;
         }
-        
     }
     .views-box {
         width: 350px;
@@ -249,7 +244,6 @@ section {
         width: 150px;
         height: 150px;
         object-fit: cover;
-        
     }
 }
 footer {
@@ -275,13 +269,12 @@ footer {
   -7deg
   ); */
 }
-.offOn{
+.offOn {
     display: none;
     transition: all 2s;
 }
-.onOff{
+.onOff {
     display: block;
-    
 }
 .box3 {
     width: 100%;
@@ -295,17 +288,28 @@ footer {
 
 .about-content {
     padding: 0 20px;
+    margin-bottom: 20px;
     h1 {
         font-family: $main-chinese;
     }
     .about-text {
         display: flex;
+        // 小於等於
+        @media screen and (max-width: 1000px) {
+            flex-wrap: wrap;
+        }
+
         P {
             padding: 0 30px;
             font-family: $main-chinese;
         }
         img {
             object-fit: cover;
+            // 小於等於
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -313,18 +317,35 @@ footer {
 // 觀光人口統計
 .NumberPeople {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     // background-color: cadetblue;
     background: linear-gradient(120deg, #a0c4ff 50%, transparent 50%);
     display: flex;
     justify-content: center;
+
+    // 小於等於
+    @media screen and (max-width: 1000px) {
+        background: #ffffff;
+        flex-wrap: wrap;
+    }
     .statistics {
         width: 600px;
         // height: 600px;
         padding-top: 150px;
         // border: black 1px solid;
+        display: flex;
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+            background: #a0c4ff;
+            padding: 20px 0;
+            justify-content: center;
+            
+        }
         h2 {
             color: white;
+        }
+        .statistics-content {
+            // 這邊是用來置中圖表用的flex
         }
         span {
             color: white;
@@ -355,6 +376,10 @@ footer {
         // height: 600px;
         // border: black 1px solid;
         padding-top: 150px;
+        @media screen and (max-width: 1000px) {
+            padding: 0;
+            
+        }
         p {
             margin: 0 auto;
             width: 400px;

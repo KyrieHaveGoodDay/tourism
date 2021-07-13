@@ -352,6 +352,7 @@ footer p {
 
 .about-content {
   padding: 0 20px;
+  margin-bottom: 20px;
 }
 
 .about-content h1 {
@@ -364,6 +365,13 @@ footer p {
   display: flex;
 }
 
+@media screen and (max-width: 1000px) {
+  .about-content .about-text {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .about-content .about-text P {
   padding: 0 30px;
   font-family: "Noto Sans TC", sans-serif;
@@ -374,9 +382,16 @@ footer p {
      object-fit: cover;
 }
 
+@media screen and (max-width: 1000px) {
+  .about-content .about-text img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .NumberPeople {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(120deg, #a0c4ff 50%, transparent 50%);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,9 +401,31 @@ footer p {
           justify-content: center;
 }
 
+@media screen and (max-width: 1000px) {
+  .NumberPeople {
+    background: #ffffff;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .NumberPeople .statistics {
   width: 600px;
   padding-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+  .NumberPeople .statistics {
+    width: 100%;
+    background: #a0c4ff;
+    padding: 20px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .NumberPeople .statistics h2 {
@@ -426,6 +463,12 @@ footer p {
 .NumberPeople .introduction {
   width: 600px;
   padding-top: 150px;
+}
+
+@media screen and (max-width: 1000px) {
+  .NumberPeople .introduction {
+    padding: 0;
+  }
 }
 
 .NumberPeople .introduction p {
