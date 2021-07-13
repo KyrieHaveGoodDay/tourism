@@ -231,6 +231,7 @@ section .views-box p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1000px) {
