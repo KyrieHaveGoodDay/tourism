@@ -160,6 +160,7 @@ section {
         }
         p {
             margin-bottom: 20px;
+            text-align: left;
         }
     }
 }
@@ -304,7 +305,7 @@ footer {
             font-family: $main-chinese;
         }
         img {
-            object-fit: cover;
+            object-fit: cover; 
             // 小於等於
             @media screen and (max-width: 1000px) {
                 width: 100%;

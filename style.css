@@ -193,6 +193,7 @@ section .views-box img {
 
 section .views-box p {
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .flexed {
