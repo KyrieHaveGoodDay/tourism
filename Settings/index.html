@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台設定</title>
+    <style>
+        .top {
+            display: flex;
+            justify-content: center;
+        }
+
+        .top h2 {
+            text-align: center;
+        }
+        .top a{
+            font-size: 14px;
+        }
+
+        .top label,
+        .top input {
+            margin-left: 20px;
+        }
+
+        .top img {
+            width: 600px;
+            height: 400px;
+            /* object-fit: cover; */
+        }
+
+
+        .btn-send {
+            margin-top: 20px;
+            color: white;
+            background-color: black;
+            padding: 10px 60px;
+            transition: 1s;
+        }
+
+        .btn-send:hover {
+            background-color: white;
+            color: black;
+            border: 2px black solid;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+        <div>
+            <img src="../img/top.PNG" alt="">
+        </div>
+        <div>
+            <h2>設定區</h2>
+            <label for="video">影片位址檔: <a href="https://imgur.com/" target="_blank">可以到這裡上傳影片</a> </label><br>
+            <input type="text" name="video" id="video"><br>
+            <label for="text1">第一行文字:</label><br>
+            <input type="text" name="text1" id="text1"><br>
+            <label for="text2">第二行文字:</label><br>
+            <input type="text" name="text2" id="text2"><br>
+            <input type="submit" id="btn-send" class="btn-send" value="送出">
+        </div>
+    </div>
+</body>
+
+</html>
