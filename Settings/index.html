@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>後台設定</title>
+    <!-- slick -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- lightbox -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <style>
         .top {
             display: flex;
@@ -49,22 +60,40 @@
 </head>
 
 <body>
-
+    <!-- 第一塊 -->
     <div class="top">
         <div>
             <img src="../img/top.PNG" alt="">
         </div>
-        <div>
+        <form>
             <h2>設定區</h2>
             <label for="video">影片位址檔: <a href="https://imgur.com/" target="_blank">可以到這裡上傳影片</a> </label><br>
-            <input type="text" name="video" id="video"><br>
-            <label for="text1">第一行文字:</label><br>
-            <input type="text" name="text1" id="text1"><br>
+            <input type="text" name="video" id="video" required><br>
+            <label for="text1">第一行文字:(建議英文)</label><br>
+            <input type="text" name="text1" id="text1" required><br>
             <label for="text2">第二行文字:</label><br>
-            <input type="text" name="text2" id="text2"><br>
-            <input type="submit" id="btn-send" class="btn-send" value="送出">
-        </div>
+            <input type="text" name="text2" id="text2" required><br>
+            <input type="submit" id="bn_send" class="btn-send" value="送出">
+        </form>
     </div>
+    <hr>
+
+
+
+    <!-- firebase cdn -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <!-- jq -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../main.js"></script>
 </body>
 
 </html>

@@ -44,4 +44,23 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
+var todos = firebase.database().ref('videos');
+// 第一層按鈕
+var bn_send = document.getElementById('bn_send');
+
+// 將資料存入資料庫
+bn_send.addEventListener('click',function(e){
+    e.preventDefault();
+    var video = document.getElementById('video').value;
+    var text1 = document.getElementById('text1').value;
+    var text2 = document.getElementById('text2').value;
+    
+    todos.set({
+        video:video,
+        text1:text1,
+        text2:text2
+    })
+})
+
+
 
