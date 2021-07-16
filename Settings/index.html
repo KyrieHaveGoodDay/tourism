@@ -26,6 +26,9 @@
         .top h2 {
             text-align: center;
         }
+        .top h1{
+            text-align: center;
+        }
         .top a{
             font-size: 14px;
         }
@@ -65,8 +68,8 @@
         <div>
             <img src="../img/top.PNG" alt="">
         </div>
-        <form>
-            <h2>設定區</h2>
+        <form id="banner_setting">
+            <h1>設定區</h1>
             <label for="video">影片位址檔: <a href="https://imgur.com/" target="_blank">可以到這裡上傳影片</a> </label><br>
             <input type="text" name="video" id="video" required><br>
             <label for="text1">第一行文字:(建議英文)</label><br>
@@ -77,6 +80,47 @@
         </form>
     </div>
     <hr>
+    <!-- 第二層 景點設定區 -->
+    <div class="top">
+        <div>
+            <img src="../img/View2.png" alt="">
+        </div>
+        <form id="view_left">
+            <h1>左邊設定區</h1>
+            <h2>左邊照片標題文字</h2>
+            <label for="images_left">照片位址檔: <a href="https://imgur.com/" target="_blank">可以到這裡上傳影片</a> </label><br>
+            <input type="text" name="images_left" id="images_left" required><br>
+            <label for="text1_left">左邊標題:</label><br>
+            <input type="text" name="text1_left" id="text1_left"  required><br>
+            <label for="text2_left">左邊內文:</label><br>
+            <input type="text" name="text2_left" id="text2_left"  required><br>
+            <input type="submit" id="send_left"  class="btn-send" value="送出">
+            
+        </form>
+        <form id="view_min">
+            <h1>中間設定區</h1>
+            <h2>中間照片標題文字</h2>
+            <label for="images_min">照片位址檔: <a href="https://imgur.com/" target="_blank">可以到這裡上傳影片</a> </label><br>
+            <input type="text" name="images_min" id="images_min" required><br>
+            <label for="text1_min">中間標題:</label><br>
+            <input type="text" name="text1_min" id="text1_min" required><br>
+            <label for="text2_min">中間內文:</label><br>
+            <input type="text" name="text2_min" id="text2_min"  required><br>
+            <input type="submit" id="send_min"  class="btn-send" value="送出">
+        </form>
+        <form id="view_right">
+            <h1>右邊設定區</h1>
+            <h2>右邊照片標題文字</h2>
+            <label for="images_right">照片位址檔: <a href="https://imgur.com/" target="_blank">可以到這裡上傳影片</a> </label><br>
+            <input type="text" name="images_right" id="images_right" required><br>
+            <label for="text1_right">右邊標題:</label><br>
+            <input type="text" name="text1_right" id="text1_right"  required><br>
+            <label for="text2_right">右邊內文:</label><br>
+            <input type="text" name="text2_right" id="text2_right"  required><br>
+            <input type="submit" id="send_right"  class="btn-send" value="送出">
+        </form>
+    </div>
+
 
 
 
