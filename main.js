@@ -77,7 +77,7 @@ send_left.addEventListener('click',function(e){
     var text2_left = document.getElementById('text2_left').value;
     
     todos_left.set({
-        video:images_left,
+        img:images_left, 
         text1:text1_left,
         text2:text2_left
     })
@@ -98,7 +98,7 @@ send_min.addEventListener('click',function(e){
     var text2_min = document.getElementById('text2_min').value;
     
     todos_min.set({
-        video:images_min,
+        img:images_min, 
         text1:text1_min,
         text2:text2_min
     })
@@ -119,7 +119,7 @@ send_right.addEventListener('click',function(e){
     var text2_right = document.getElementById('text2_right').value;
     
     todos_right.set({
-        video:images_right,
+        img:images_right, 
         text1:text1_right,
         text2:text2_right
     })
@@ -127,6 +127,81 @@ send_right.addEventListener('click',function(e){
     
 });
 
+// more之後的照片 左邊
+var todos_more_left = firebase.database().ref('MoreLeft');
+// 按鈕
+var send_more_left = document.getElementById('send_more_left');
 
+// 將資料寫入資料庫
+send_more_left.addEventListener('click',function(e){
+    e.preventDefault();
+    var more_left_img1 = document.getElementById('more_left_img1').value;
+    var more_left_text1 = document.getElementById('more_left_text1').value;
+    var more_left_img2 = document.getElementById('more_left_img2').value;
+    var more_left_text2 = document.getElementById('more_left_text2').value;
+    var more_left_img3 = document.getElementById('more_left_img3').value;
+    var more_left_text3 = document.getElementById('more_left_text3').value;
+    
+    todos_more_left.set({
+        img1:more_left_img1,
+        text1:more_left_text1,
+        img2:more_left_img2,
+        text2:more_left_text2,
+        img3:more_left_img3,
+        text3:more_left_text3
+    })
+    $('#view_more_left')[0].reset();
+    
+});
+// more之後的照片 中間
+var todos_more_min = firebase.database().ref('MoreMin');
+// 按鈕
+var send_more_min = document.getElementById('send_more_min');
 
+// 將資料寫入資料庫
+send_more_min.addEventListener('click',function(e){
+    e.preventDefault();
+    var more_min_img1 = document.getElementById('more_min_img1').value;
+    var more_min_text1 = document.getElementById('more_min_text1').value;
+    var more_min_img2 = document.getElementById('more_min_img2').value;
+    var more_min_text2 = document.getElementById('more_min_text2').value;
+    var more_min_img3 = document.getElementById('more_min_img3').value;
+    var more_min_text3 = document.getElementById('more_min_text3').value;
+    
+    todos_more_min.set({
+        img1:more_min_img1,
+        text1:more_min_text1,
+        img2:more_min_img2,
+        text2:more_min_text2,
+        img3:more_min_img3,
+        text3:more_min_text3
+    })
+    $('#view_more_min')[0].reset();
+    
+});
+// more之後的照片 右邊
+var todos_more_right = firebase.database().ref('MoreRight');
+// 按鈕
+var send_more_right = document.getElementById('send_more_right');
 
+// 將資料寫入資料庫
+send_more_right.addEventListener('click',function(e){
+    e.preventDefault();
+    var more_right_img1 = document.getElementById('more_right_img1').value;
+    var more_right_text1 = document.getElementById('more_right_text1').value;
+    var more_right_img2 = document.getElementById('more_right_img2').value;
+    var more_right_text2 = document.getElementById('more_right_text2').value;
+    var more_right_img3 = document.getElementById('more_right_img3').value;
+    var more_right_text3 = document.getElementById('more_right_text3').value;
+    
+    todos_more_right.set({
+        img1:more_right_img1,
+        text1:more_right_text1,
+        img2:more_right_img2,
+        text2:more_right_text2,
+        img3:more_right_img3,
+        text3:more_right_text3
+    })
+    $('#view_more_right')[0].reset();
+    
+});
