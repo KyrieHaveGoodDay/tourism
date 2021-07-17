@@ -1,31 +1,3 @@
-// AOS
-AOS.init();
-
-
-// Slick
-$('#activity-img ,#activity-winter').slick({
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000
-});
-
-$(window).scroll(function () {
-    var scrollPos = $(window).scrollTop();
-    // console.log(scrollPos);
-    if (scrollPos > 630) {
-        $('#number .progress-bar').each(function () {
-            var thisValue = $(this).data('progress');
-            // console.log(thisValue);
-            $(this).css('width', thisValue + "%");
-        })
-    }
-})
-
-$('#moveBox').slideUp();
-
-$('#offOn').click(function () {
-    $('#moveBox').slideToggle('slow');
-})
 
 
 // firebase
@@ -44,7 +16,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-// 第一層資料表
+// 第一層資料表 banner
 var todos = firebase.database().ref('videos');
 // 第一層按鈕
 var bn_send = document.getElementById('bn_send');
@@ -63,6 +35,12 @@ bn_send.addEventListener('click',function(e){
     });
     $('#banner_setting')[0].reset();
 });
+// 取值video
+// todos.on('value' , function(snapshot){
+//     console.log(snapshot.val());
+// });
+
+
 
 // 第二層左邊
 var todos_left = firebase.database().ref('ViewLeft');
@@ -256,3 +234,5 @@ send_activity_right.addEventListener('click',function(e){
     $('#activity_right')[0].reset();
     
 });
+
+
