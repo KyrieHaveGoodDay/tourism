@@ -205,3 +205,54 @@ send_more_right.addEventListener('click',function(e){
     $('#view_more_right')[0].reset();
     
 });
+
+// 活動 左邊
+var todos_activity_left = firebase.database().ref('ActivityLeft');
+// 按鈕
+var send_activity_left = document.getElementById('send_activity_left');
+
+// 將資料寫入資料庫
+send_activity_left.addEventListener('click',function(e){
+    e.preventDefault();
+    var activity_left_img1 = document.getElementById('activity_left_img1').value;
+    var activity_left_img2 = document.getElementById('activity_left_img2').value;
+    var activity_left_img3 = document.getElementById('activity_left_img3').value;
+    var activity_left_text1 = document.getElementById('activity_left_text1').value;
+    var activity_left_text2 = document.getElementById('activity_left_text2').value;
+    
+    
+    todos_activity_left.set({
+        img1:activity_left_img1,
+        img2:activity_left_img2,
+        img3:activity_left_img3,
+        text1:activity_left_text1,
+        text2:activity_left_text2
+    })
+    $('#activity_left')[0].reset();
+    
+});
+// 活動 右邊
+var todos_activity_right = firebase.database().ref('ActivityRight');
+// 按鈕
+var send_activity_right = document.getElementById('send_activity_right');
+
+// 將資料寫入資料庫
+send_activity_right.addEventListener('click',function(e){
+    e.preventDefault();
+    var activity_right_img1 = document.getElementById('activity_right_img1').value;
+    var activity_right_img2 = document.getElementById('activity_right_img2').value;
+    var activity_right_img3 = document.getElementById('activity_right_img3').value;
+    var activity_right_text1 = document.getElementById('activity_right_text1').value;
+    var activity_right_text2 = document.getElementById('activity_right_text2').value;
+    
+    
+    todos_activity_right.set({
+        img1:activity_right_img1,
+        img2:activity_right_img2,
+        img3:activity_right_img3,
+        text1:activity_right_text1,
+        text2:activity_right_text2
+    })
+    $('#activity_right')[0].reset();
+    
+});
