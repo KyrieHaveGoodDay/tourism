@@ -9,11 +9,11 @@
 </head>
 <body>
      <!-- data-slider-duration 自動撥放時間 -->
-     <div id="kyrie-slider" data-slider-duration="3000">
+     <div id="kyrie-slider" class="more_cable" data-slider-duration="3000">
 
         <!-- 輪播圖項目：根據需求複製貼上 active 只有一組 -->
         <!-- 新增圖片也要新增按鈕item  按鈕item依照順序給 -->
-        <div class="kyrie-item kyrie-active" >
+        <!-- <div class="kyrie-item kyrie-active" >
             <img src="../img/cable1.jpg" style="object-fit: cover;" alt="cable">
             <h1>這裡纜車是起點</h1>
         </div>
@@ -24,7 +24,7 @@
         <div class="kyrie-item">
             <img src="../img/cable3.jpg" style="object-fit: cover;" alt="cable">
             <h1>這裡纜車是終點</h1>
-        </div>
+        </div> -->
 
 
         <div id="kyrie-prev"></div>
@@ -33,14 +33,27 @@
 
         <!-- 小顆按扭區塊：根據需求複製貼上 active 只有一組 -->
         <!-- 新增圖片也要新增按鈕item  按鈕item依照順序給 -->
-        <div id="kyrie-buttons">
+        <!-- <div id="kyrie-buttons">
             <div class="kyrie-button kyrie-button-active" data-slider-item="1"></div>
             <div class="kyrie-button" data-slider-item="2"></div>
             <div class="kyrie-button" data-slider-item="3"></div>
-        </div>
+        </div> -->
     </div>
 
 
+    <!-- firebase cdn -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-analytics.js"></script>
+    <script src="../more.js"></script>
+    
+    <!-- jq -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- 套件cdn -->
     <script src="https://kyriehavegoodday.github.io/HC_banner/script.js"></script>
 </body>
 </html>

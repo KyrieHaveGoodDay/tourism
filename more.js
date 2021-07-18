@@ -15,6 +15,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 // 取值
+// left
 var MoreLeft = firebase.database().ref('MoreLeft');
 MoreLeft.on('value', function (snapshot) {
     // var kyrie_slider = document.get('kyrie-slider');
@@ -47,4 +48,74 @@ MoreLeft.on('value', function (snapshot) {
     </div>
     `;
     more_arctic[0].innerHTML = str;
-})
+});
+
+// 中間
+var MoreMin = firebase.database().ref('MoreMin');
+MoreMin.on('value', function (snapshot) {
+    // var kyrie_slider = document.get('kyrie-slider');
+    var more_cable = document.getElementsByClassName('more_cable');
+    // console.log(more_arctic);
+    var str = '';
+    var data = snapshot.val();
+
+    str = `
+    
+    <div class="kyrie-item kyrie-active" >
+        <img src="${data.img1}" style="object-fit: cover;" alt="cable">
+        <h1>${data.text1}</h1>
+    </div>
+    <div class="kyrie-item">
+        <img src="${data.img2}" style="object-fit: cover;" alt="cable">
+        <h1>${data.text2}</h1>
+    </div>
+    <div class="kyrie-item">
+        <img src="${data.img3}" style="object-fit: cover;" alt="cable">
+        <h1>${data.text3}</h1>
+    </div>
+
+    
+
+    <div id="kyrie-buttons">
+        <div class="kyrie-button kyrie-button-active" data-slider-item="1"></div>
+        <div class="kyrie-button" data-slider-item="2"></div>
+        <div class="kyrie-button" data-slider-item="3"></div>
+    </div>
+    `;
+    more_cable[0].innerHTML = str;
+});
+
+// 右邊
+var MoreRight = firebase.database().ref('MoreRight');
+MoreRight.on('value', function (snapshot) {
+    // var kyrie_slider = document.get('kyrie-slider');
+    var more_beer = document.getElementsByClassName('more_beer');
+    // console.log(more_arctic);
+    var str = '';
+    var data = snapshot.val();
+
+    str = `
+    
+    <div class="kyrie-item kyrie-active" >
+        <img src="${data.img1}" style="object-fit: cover;" alt="cable">
+        <h1>${data.text1}</h1>
+    </div>
+    <div class="kyrie-item">
+        <img src="${data.img2}" style="object-fit: cover;" alt="cable">
+        <h1>${data.text2}</h1>
+    </div>
+    <div class="kyrie-item">
+        <img src="${data.img3}" style="object-fit: cover;" alt="cable">
+        <h1>${data.text3}</h1>
+    </div>
+
+    
+
+    <div id="kyrie-buttons">
+        <div class="kyrie-button kyrie-button-active" data-slider-item="1"></div>
+        <div class="kyrie-button" data-slider-item="2"></div>
+        <div class="kyrie-button" data-slider-item="3"></div>
+    </div>
+    `;
+    more_beer[0].innerHTML = str;
+});
