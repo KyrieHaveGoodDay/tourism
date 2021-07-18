@@ -45,9 +45,9 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-// 取出資料庫資料
+// 取出video資料庫資料  2021/07/18 發現不能跟特效aos一起使用
 var videos = firebase.database().ref('videos');
-videos.once('value', function (snapshot) {
+videos.on('value', function (snapshot) {
     // console.log(snapshot.val());
     var data = snapshot.val();
     // console.log(data.video);
@@ -68,3 +68,6 @@ banner_video.innerHTML = str;
 })
 
 
+// 景點區gui
+var ViewLeft = firebase.database().ref('ViewLeft');
+ViewLeft.once
