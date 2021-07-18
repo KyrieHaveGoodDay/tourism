@@ -68,6 +68,7 @@ banner_video.innerHTML = str;
 
 
 // 景點區gui
+// 左邊
 var ViewLeft = firebase.database().ref('ViewLeft');
 ViewLeft.on('value' , function(snapshot){
     // console.log(snapshot.img);
@@ -84,7 +85,43 @@ ViewLeft.on('value' , function(snapshot){
 <a class="all-a" href="./Arctic/" target="_blank">MORE</a>`;
 
 view_left.innerHTML = str;
-})
+});
+// 中間
+var ViewMin = firebase.database().ref('ViewMin');
+ViewMin.on('value' , function(snapshot){
+    // console.log(snapshot.img);
+    var data = snapshot.val();
+    // console.log(data.img);
+    var view_min = document.getElementById('view_min');
+    var str = '';
+    str= ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
+    data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-once="true" alt="">
+<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"
+    data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text1}</h2>
+<p data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1500"
+    data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text2}</p>
+    <a class="all-a" href="./Cable/" target="_blank">MORE</a>`;
+
+    view_min.innerHTML = str;
+});
+// 右邊
+var ViewRight = firebase.database().ref('ViewRight');
+ViewRight.on('value' , function(snapshot){
+    // console.log(snapshot.img);
+    var data = snapshot.val();
+    // console.log(data.img);
+    var view_right = document.getElementById('view_right');
+    var str = '';
+    str= ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
+    data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-once="true" alt="">
+<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"
+    data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text1}</h2>
+<p data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1500"
+    data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text2}</p>
+    <a class="all-a" href="./Beer/" target="_blank">MORE</a>`;
+
+    view_right.innerHTML = str;
+});
 
 
 
