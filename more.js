@@ -38,7 +38,7 @@ MoreLeft.on('value', function (snapshot) {
         <h1>${data.text3}</h1>
     </div>
 
-    // 奇怪1
+    <!-- 奇怪1 -->
     <div id="kyrie-prev"></div>
     <div id="kyrie-next"></div>
 
