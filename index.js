@@ -54,14 +54,14 @@ videos.once('value', function (snapshot) {
     var str = '';
     var banner_video = document.getElementById('banner_video');
     str = `<div class="banner-video">
-    <video autoplay muted loop data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1000">
+    <video autoplay muted loop >
         
         <source src="${data.video}" type="video/mp4">
     </video>
 </div>
 <div class="banner-text">
-    <h3 data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1000">${data.text1} </h3>
-    <p data-aos="zoom-in-up" data-aos-duration="1500">${data.text2}</p>
+    <h3>${data.text1} </h3>
+    <p>${data.text2}</p>
 </div>`
 
 banner_video.innerHTML = str;
