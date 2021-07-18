@@ -9,6 +9,7 @@ $('#activity-img ,#activity-winter').slick({
     autoplaySpeed: 2000
 });
 
+// 滾輪特效
 $(window).scroll(function () {
     var scrollPos = $(window).scrollTop();
     // console.log(scrollPos);
@@ -26,4 +27,7 @@ $('#moveBox').slideUp();
 $('#offOn').click(function () {
     $('#moveBox').slideToggle('slow');
 })
+
+
+
 
