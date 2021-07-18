@@ -1,12 +1,7 @@
 // AOS
 AOS.init();
 
-// Slick
-$('#activity-img ,#activity-winter').slick({
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 2000
-});
+
 
 // 滾輪特效
 $(window).scroll(function () {
@@ -63,20 +58,20 @@ videos.on('value', function (snapshot) {
     <p>${data.text2}</p>
 </div>`;
 
-banner_video.innerHTML = str;
+    banner_video.innerHTML = str;
 })
 
 
 // 景點區gui
 // 左邊
 var ViewLeft = firebase.database().ref('ViewLeft');
-ViewLeft.on('value' , function(snapshot){
+ViewLeft.on('value', function (snapshot) {
     // console.log(snapshot.img);
     var data = snapshot.val();
     // console.log(data.img);
     var view_left = document.getElementById('view_left');
     var str = '';
-    str= ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
+    str = ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
     data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-once="true" alt="">
 <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"
     data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text1}</h2>
@@ -84,17 +79,17 @@ ViewLeft.on('value' , function(snapshot){
     data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text2}</p>
 <a class="all-a" href="./Arctic/" target="_blank">MORE</a>`;
 
-view_left.innerHTML = str;
+    view_left.innerHTML = str;
 });
 // 中間
 var ViewMin = firebase.database().ref('ViewMin');
-ViewMin.on('value' , function(snapshot){
+ViewMin.on('value', function (snapshot) {
     // console.log(snapshot.img);
     var data = snapshot.val();
     // console.log(data.img);
     var view_min = document.getElementById('view_min');
     var str = '';
-    str= ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
+    str = ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
     data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-once="true" alt="">
 <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"
     data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text1}</h2>
@@ -106,13 +101,13 @@ ViewMin.on('value' , function(snapshot){
 });
 // 右邊
 var ViewRight = firebase.database().ref('ViewRight');
-ViewRight.on('value' , function(snapshot){
+ViewRight.on('value', function (snapshot) {
     // console.log(snapshot.img);
     var data = snapshot.val();
     // console.log(data.img);
     var view_right = document.getElementById('view_right');
     var str = '';
-    str= ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
+    str = ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
     data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-once="true" alt="">
 <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"
     data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text1}</h2>
@@ -123,5 +118,61 @@ ViewRight.on('value' , function(snapshot){
     view_right.innerHTML = str;
 });
 
+// 活動gui 
+// 左邊
+var ActivityLeft = firebase.database().ref('ActivityLeft');
+ActivityLeft.on('value', function (snapshot) {
+    // console.log(snapshot.img);
+    var data = snapshot.val();
+    // console.log(data);
+    var activity_left = document.getElementById('activity_left');
+    var str = '';
+    str = `<div id="activity-img" class="activity-img" data-aos="fade-right" data-aos-duration="1000"
+    data-aos-delay="1000" data-aos-once="true">
+    <img src="${data.img1}" alt="">
+    <img src="${data.img2}" alt="">
+    <img src="${data.img3}" alt="">
+</div>
+<h2 data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="1500" data-aos-once="true"
+    data-aos-anchor-placement="top-bottom">${data.text1}</h2>
+<p data-aos="zoom-out-right" data-aos-duration="1000" data-aos-delay="2000" data-aos-once="true"
+    data-aos-anchor-placement="top-bottom">${data.text2}</p>`
+
+    activity_left.innerHTML = str;
+    // Slick
+    $('#activity-img ').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000
+    });
+});
+
+// 右邊
+var ActivityRight = firebase.database().ref('ActivityRight');
+ActivityRight.on('value', function (snapshot) {
+    // console.log(snapshot.img);
+    var data = snapshot.val();
+    // console.log(data);
+    var activity_right = document.getElementById('activity_right');
+    var str = '';
+    str = ` <div id="activity-winter" class="activity-img" data-aos="fade-left" data-aos-duration="1000"
+    data-aos-delay="1000" data-aos-once="true">
+    <img src="${data.img1}" alt="">
+    <img src="${data.img2}" alt="">
+    <img src="${data.img3}" alt="">
+</div>
+<h2 data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="1500" data-aos-once="true"
+    data-aos-anchor-placement="top-bottom">${data.text1}</h2>
+<p data-aos="zoom-out-left" data-aos-duration="1000" data-aos-delay="2000" data-aos-once="true"
+    data-aos-anchor-placement="top-bottom">${data.text2}</p>`
+
+    activity_right.innerHTML = str;
+    // Slick
+    $('#activity-winter').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000
+    });
+});
 
 
