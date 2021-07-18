@@ -1,7 +1,6 @@
 // AOS
 AOS.init();
 
-
 // Slick
 $('#activity-img ,#activity-winter').slick({
     dots: true,
@@ -62,7 +61,7 @@ videos.on('value', function (snapshot) {
 <div class="banner-text">
     <h3>${data.text1} </h3>
     <p>${data.text2}</p>
-</div>`
+</div>`;
 
 banner_video.innerHTML = str;
 })
@@ -70,4 +69,22 @@ banner_video.innerHTML = str;
 
 // 景點區gui
 var ViewLeft = firebase.database().ref('ViewLeft');
-ViewLeft.once
+ViewLeft.on('value' , function(snapshot){
+    // console.log(snapshot.img);
+    var data = snapshot.val();
+    // console.log(data.img);
+    var view_left = document.getElementById('view_left');
+    var str = '';
+    str= ` <img src="${data.img}" data-aos="flip-left" data-aos-duration="2000"
+    data-aos-delay="1000" data-aos-anchor-placement="top-bottom" data-aos-once="true" alt="">
+<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000"
+    data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text1}</h2>
+<p data-aos="fade-down" data-aos-duration="2000" data-aos-delay="1500"
+    data-aos-anchor-placement="top-bottom" data-aos-once="true">${data.text2}</p>
+<a class="all-a" href="./Arctic/" target="_blank">MORE</a>`;
+
+view_left.innerHTML = str;
+})
+
+
+
