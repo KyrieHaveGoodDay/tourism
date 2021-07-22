@@ -3,10 +3,11 @@ AOS.init();
 
 
 
-// 滾輪特效
+// 滾輪偵測
+
 $(window).scroll(function () {
     var scrollPos = $(window).scrollTop();
-    // console.log(scrollPos);
+    console.log(scrollPos);
     if (scrollPos > 630) {
         $('#number .progress-bar').each(function () {
             var thisValue = $(this).data('progress');
@@ -16,11 +17,18 @@ $(window).scroll(function () {
     }
 })
 
-$('#moveBox').slideUp();
 
-$('#offOn').click(function () {
-    $('#moveBox').slideToggle('slow');
+// about 畫面載入就把頁面展開
+$('#moveBox').slideUp();
+$(document).ready(function(){
+    $('#moveBox').slideToggle(1500);
 })
+
+
+
+// $('#offOn').click(function () {
+   
+// })
 
 
 // firebase
@@ -47,16 +55,17 @@ videos.on('value', function (snapshot) {
     // console.log(data.video);
     var str = '';
     var banner_video = document.getElementById('banner_video');
-    str = `<div class="banner-video">
+    str = `
+    <div class="banner-video">
     <video autoplay muted loop >
         
         <source src="${data.video}" type="video/mp4">
     </video>
-</div>
-<div class="banner-text">
-    <h3>${data.text1} </h3>
-    <p>${data.text2}</p>
-</div>`;
+    </div>
+    <div class="banner-text">
+        <h3>${data.text1} </h3>
+        <p>${data.text2}</p>
+    </div>`;
 
     banner_video.innerHTML = str;
 })
